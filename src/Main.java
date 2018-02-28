@@ -1,11 +1,14 @@
 import java.sql.*;
 
 public class Main {
+
     private static final String url = "jdbc:mysql://localhost/health";
     private static final String user = "root";
     private static final String pass = "root";
+    
     private static Connection con;
     private static Statement  stm;
+
     private static void getConnection(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -15,6 +18,7 @@ public class Main {
             ex.printStackTrace();
         }
     }
+
     public static void main (String[] args){
         getConnection();
         try {
